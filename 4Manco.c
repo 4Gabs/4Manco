@@ -1,5 +1,21 @@
 #include <stdio.h>
 
+/*recebeEntrada esta armazenado os vetores A,B,T na memoria
+para serem utilizados na funçao afim
+não utilizei o & na passagem dos parametro A,B,T serem vetores estaticos
+ou seja, ja são endereços de memoria e as modificações serão
+captadas pela função que invocou recebe entrada,T = tempo   */
+void recebeEntrada(int n, int a[n], int b[n], int t[n])
+{
+    
+    for(int i = 0; i < n; i++){
+
+        scanf("%d",& (a[i]));
+        scanf("%d",& (b[i]));
+        scanf("%d",& (t[i]));
+    }
+
+}
 void funcaoQuadratica(int n, int raizes[n], int areas[n]){
     int a [n];
     int b [n];
@@ -45,8 +61,29 @@ void funcaoQuadratica(int n, int raizes[n], int areas[n]){
 }
 
 int main(){
+
+
+    int n;
+    scanf("%d",&n);
+
+    int a[n];
+    int b[n];
+    int t[n];
+    /* a função afim e dada por : A[i]*x + B[i] = 0,
+    onde i representa o cano em questão e x =T[i]*/  
+    recebeEntrada(n,a,b,t);
     funcaoQuadratica(n, raizes, areas);
 
+    /* cometei por causa que essa nao eh a reposta final.
+     Quem vai dar ela vai ser o 4gabs*/
+    /*for(int i = 0; i < n; i++)
+    {
+        
+        printf("o valor de a[%d]: %d\n",i,a[i]);
+        printf("o valor de b[%d]: %d\n",i,b[i]);
+        printf("o valor de t[%d]: %d\n",i,t[i]);
+
+    }*/
 
 
     return 0;
