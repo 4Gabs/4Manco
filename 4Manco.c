@@ -16,6 +16,17 @@ void recebeEntrada(int n, int a[n], int b[n], int t[n])
     }
 
 }
+
+void funcaoAfim(int n, int a[n], int b[n]){
+
+    for(int i = 0; i < n; i++){
+
+        printf("\nfuncao obedecida: %d*t + (%d)\n",a[i],b[i]);
+
+    }
+    
+}
+
 void funcaoQuadratica(int n, int raizes[n], int areas[n]){
     int a [n];
     int b [n];
@@ -72,6 +83,9 @@ int main(){
     /* a função afim e dada por : A[i]*x + B[i] = 0,
     onde i representa o cano em questão e x =T[i]*/  
     recebeEntrada(n,a,b,t);
+   
+    funcaoAfim(n,a,b);
+
     funcaoQuadratica(n, raizes, areas);
 
     /* cometei por causa que essa nao eh a reposta final.
